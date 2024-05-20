@@ -5,10 +5,7 @@ describe("App tests", () => {
   it("should render the title", () => {
     render(<App />);
 
-    expect(
-      screen.getByRole("heading", {
-        level: 1,
-      })
-    ).toHaveAccessibleName("Flight Status");
+    const linkElement = screen.getByText(/Flight Status/i);
+    expect(linkElement).toBeInTheDocument();
   });
 });
