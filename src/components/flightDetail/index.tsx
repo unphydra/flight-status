@@ -1,8 +1,18 @@
 import { Box, Container, Typography } from "@mui/material";
-import { FlightDetail as FlightDetailType } from "../../api/flightApi";
+import {
+  FlightDetail as FlightDetailType,
+  FlightStatus as FlightStatusEnum,
+} from "../../api/flightApi";
 import { formatDateTime } from "../../utils/date";
 import FlightStatus from "../flightStatus";
 import "./FlightDetail.css";
+
+const flightStatusClassNameMap: Record<FlightStatusEnum, string> = {
+  [FlightStatusEnum.ON_TIME]: "flight-detail-status-on-time",
+  [FlightStatusEnum.BOARDING]: "flight-detail-status-boarding",
+  [FlightStatusEnum.DEPARTED]: "flight-detail-status-departed",
+  [FlightStatusEnum.DELAYED]: "flight-detail-status-delayed",
+};
 
 export default function FlightDetail({
   flightDetail,
@@ -11,7 +21,11 @@ export default function FlightDetail({
 }) {
   return (
     <Container className="flight-detail-container">
-      <Box className="flight-detail-box">
+      <Box
+        className={`flight-detail-box ${
+          flightStatusClassNameMap[flightDetail.status]
+        }`}
+      >
         <Box className="flight-detail-airline-box">
           <Typography fontSize={"medium"}>
             {flightDetail.airline}

@@ -11,6 +11,22 @@
   border-radius: 8px;
 }
 
+.flight-detail-status-on-time {
+  background-color: rgb(229, 248, 229);
+}
+
+.flight-detail-status-boarding {
+  background-color: rgb(226, 239, 244);
+}
+
+.flight-detail-status-departed {
+  background-color: #f6eddc;
+}
+
+.flight-detail-status-delayed {
+  background-color: #f7e7e7;
+}
+
 .flight-detail-airline-box {
   width: 10%;
   text-align: center;
