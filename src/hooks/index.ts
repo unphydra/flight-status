@@ -1,3 +1,4 @@
+import useGetFlightDetail from "./useGetFlightDetail";
 import useGetFlightList from "./useGetFlightList";
 
-export { useGetFlightList };
+export { useGetFlightDetail, useGetFlightList };
