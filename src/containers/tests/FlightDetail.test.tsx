@@ -22,7 +22,7 @@ vi.mock("axios", async (importActual) => {
   return mockAxios;
 });
 
-vi.mock("../../components/FlightDetail", () => ({
+vi.mock("../../components/flightDetail", () => ({
   default: () => <div data-testid="flight-detail"></div>,
 }));
 

@@ -19,7 +19,7 @@ describe("FlightDetails", () => {
     expect(screen.getByText("airline")).toBeInTheDocument();
     expect(screen.getByText("origin")).toBeInTheDocument();
     expect(screen.getByText("destination")).toBeInTheDocument();
-    expect(screen.getByText("May 20 2024 11:48pm")).toBeInTheDocument();
+    expect(screen.getByText("May 20 2024 06:18pm")).toBeInTheDocument();
     expect(screen.getByText("On Time")).toBeInTheDocument();
   });
 });

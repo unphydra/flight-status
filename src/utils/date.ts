@@ -7,6 +7,6 @@ dayjs.extend(timezone);
 dayjs.tz.setDefault("UTC");
 
 const formatDateTime = (dateString: string) =>
-  dayjs(dateString).format("MMM D YYYY hh:mma");
+  dayjs.utc(dateString).format("MMM D YYYY hh:mma");
 
 export { formatDateTime };

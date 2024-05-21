@@ -40,7 +40,7 @@ describe("FlightTableRow", () => {
     const destination = await screen.findByText("destination");
     expect(destination).toBeInTheDocument();
 
-    const departureTime = await screen.findByText("May 20 2024 11:48pm");
+    const departureTime = await screen.findByText("May 20 2024 06:18pm");
     expect(departureTime).toBeInTheDocument();
 
     const status = await screen.findByText("On Time");
