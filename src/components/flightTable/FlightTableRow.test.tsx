@@ -1,3 +1,4 @@
+import { Table, TableBody, TableContainer } from "@mui/material";
 import { render, screen } from "@testing-library/react";
 import { MemoryRouter as Router } from "react-router-dom";
 import { FlightDetail, FlightStatus } from "../../api/flightApi";
@@ -17,7 +18,13 @@ describe("FlightTableRow", () => {
   it("Should renders flight table row correctly", async () => {
     render(
       <Router>
-        <FlightTableRow flightDetails={flightDetails} />
+        <TableContainer>
+          <Table>
+            <TableBody>
+              <FlightTableRow flightDetails={flightDetails} />
+            </TableBody>
+          </Table>
+        </TableContainer>
       </Router>
     );
 

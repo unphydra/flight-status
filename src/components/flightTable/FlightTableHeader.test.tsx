@@ -1,10 +1,17 @@
+import { Table, TableContainer } from "@mui/material";
 import FlightTableHeader from "./FlightTableHeader";
 
 import { render, screen } from "@testing-library/react";
 
 describe("FlightsTableHeader", () => {
   it("Should renders flight table header correctly", () => {
-    render(<FlightTableHeader />);
+    render(
+      <TableContainer>
+        <Table>
+          <FlightTableHeader />
+        </Table>
+      </TableContainer>
+    );
 
     const flightNumberHeader = screen.getByText("Flight Number");
     expect(flightNumberHeader).toBeInTheDocument();
