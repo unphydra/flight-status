@@ -1,4 +1,9 @@
-import { TableCell, TableHead, TableRow } from "@mui/material";
+import {
+  TableCell,
+  TableHead,
+  TableRow,
+  TableSortLabel,
+} from "@mui/material";
 import { FlightDetail } from "../../api/flightApi";
 
 const columns: {
@@ -31,12 +36,32 @@ const columns: {
   },
 ];
 
-export default function FlightTableHeader() {
+export default function FlightTableHeader({
+  orderBy,
+  order,
+  handleSort,
+}: {
+  orderBy: string;
+  order: "asc" | "desc";
+  handleSort: (property: keyof FlightDetail) => void;
+}) {
+  const createSortHandler = (property: keyof FlightDetail) => () => {
+    handleSort(property);
+  };
+
   return (
-    <TableHead className="flight-table-header">
+    <TableHead>
       <TableRow>
-        {columns.map(({ label }, index) => (
-          <TableCell key={index}>{label}</TableCell>
+        {columns.map(({ id, label }, index) => (
+          <TableCell key={index}>
+            <TableSortLabel
+              active={orderBy === id}
+              direction={orderBy === id ? order : "asc"}
+              onClick={createSortHandler(id)}
+            >
+              {label}
+            </TableSortLabel>
+          </TableCell>
         ))}
       </TableRow>
     </TableHead>
