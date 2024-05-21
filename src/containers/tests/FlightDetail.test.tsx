@@ -1,6 +1,6 @@
 import { render, screen, waitFor } from "@testing-library/react";
 import { FlightDetail, FlightStatus } from "../../api/flightApi";
-import FlightListContainer from "../FlightList";
+import FlightDetailContainer from "../FlightDetail";
 
 const mocks = vi.hoisted(() => ({
   get: vi.fn(),
@@ -22,11 +22,11 @@ vi.mock("axios", async (importActual) => {
   return mockAxios;
 });
 
-vi.mock("../../components/flightTable", () => ({
-  default: () => <div data-testid="flight-table"></div>,
+vi.mock("../../components/FlightDetail", () => ({
+  default: () => <div data-testid="flight-detail"></div>,
 }));
 
-describe("FlightListContainer", () => {
+describe("FlightDetailContainer", () => {
   const flightDetails: FlightDetail = {
     id: 1,
     flightNumber: "1",
@@ -41,12 +41,12 @@ describe("FlightListContainer", () => {
     vi.resetAllMocks();
   });
 
-  it("Should renders flight table", async () => {
-    mocks.get.mockResolvedValue({ data: [flightDetails] });
-    render(<FlightListContainer />);
+  it("Should renders flight detail", async () => {
+    mocks.get.mockResolvedValue({ data: flightDetails });
+    render(<FlightDetailContainer id={"1"} />);
     await waitFor(() => {
-      const flightTable = screen.getByTestId("flight-table");
-      expect(flightTable).toBeInTheDocument();
+      const flightDetail = screen.getByTestId("flight-detail");
+      expect(flightDetail).toBeInTheDocument();
     });
   });
 });

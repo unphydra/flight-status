@@ -14,7 +14,7 @@ export default function FlightTable({
 }: {
   flights?: FlightDetail[];
 }) {
-  const rowsPerPage = 10;
+  const rowsPerPage = 8;
   const [page, setPage] = useState(0);
 
   return (

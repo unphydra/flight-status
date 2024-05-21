@@ -1,5 +1,6 @@
 import { TableCell } from "@mui/material";
 import TableRow from "@mui/material/TableRow";
+import { useNavigate } from "react-router-dom";
 import { FlightDetail } from "../../api/flightApi";
 import { formatDateTime } from "../../utils/date";
 import FlightStatus from "../flightStatus";
@@ -9,8 +10,16 @@ export function FlightTableRow({
 }: {
   flightDetails: FlightDetail;
 }) {
+  const navigate = useNavigate();
   return (
-    <TableRow key={flightDetails.id} hover={true}>
+    <TableRow
+      key={flightDetails.id}
+      hover={true}
+      onClick={() => {
+        navigate(`/flight/${flightDetails.id}`);
+      }}
+      sx={{ cursor: "pointer" }}
+    >
       <TableCell>{flightDetails.flightNumber}</TableCell>
       <TableCell>{flightDetails.airline}</TableCell>
       <TableCell>{flightDetails.origin}</TableCell>

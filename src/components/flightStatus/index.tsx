@@ -5,6 +5,8 @@ import { FlightStatus as FlightStatusEnum } from "../../api/flightApi";
 const Status = styled(Typography)({
   fontWeight: "bold",
   textAlign: "center",
+  padding: "10px 0px",
+  borderRadius: 5,
 });
 
 const OnTime = styled(Status)({
