@@ -10,5 +10,9 @@ export default defineConfig({
     environment: "jsdom",
     css: true,
     watch: false,
+    coverage: {
+      reporter: ["text", "json-summary", "json", "html"],
+      reportOnFailure: true,
+    },
   },
 });
