@@ -1,0 +1,40 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`FlightTableRow > Should renders without crashing 1`] = `
+<div>
+  <tr
+    class="MuiTableRow-root css-1q1u3t4-MuiTableRow-root"
+  >
+    <td
+      class="MuiTableCell-root MuiTableCell-sizeMedium css-bsph2u-MuiTableCell-root"
+    >
+      1
+    </td>
+    <td
+      class="MuiTableCell-root MuiTableCell-sizeMedium css-bsph2u-MuiTableCell-root"
+    >
+      airline
+    </td>
+    <td
+      class="MuiTableCell-root MuiTableCell-sizeMedium css-bsph2u-MuiTableCell-root"
+    >
+      origin
+    </td>
+    <td
+      class="MuiTableCell-root MuiTableCell-sizeMedium css-bsph2u-MuiTableCell-root"
+    >
+      destination
+    </td>
+    <td
+      class="MuiTableCell-root MuiTableCell-sizeMedium css-bsph2u-MuiTableCell-root"
+    >
+      departureTime
+    </td>
+    <td
+      class="MuiTableCell-root MuiTableCell-sizeMedium css-bsph2u-MuiTableCell-root"
+    >
+      On Time
+    </td>
+  </tr>
+</div>
+`;

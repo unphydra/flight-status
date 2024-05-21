@@ -1,0 +1,50 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`FlightsTableHeader > Should renders and match snapshot 1`] = `
+<div>
+  <thead
+    class="MuiTableHead-root flight-table-header css-15wwp11-MuiTableHead-root"
+  >
+    <tr
+      class="MuiTableRow-root MuiTableRow-head css-1q1u3t4-MuiTableRow-root"
+    >
+      <th
+        class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium css-1ygcj2i-MuiTableCell-root"
+        scope="col"
+      >
+        Flight Number
+      </th>
+      <th
+        class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium css-1ygcj2i-MuiTableCell-root"
+        scope="col"
+      >
+        Airline
+      </th>
+      <th
+        class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium css-1ygcj2i-MuiTableCell-root"
+        scope="col"
+      >
+        Origin
+      </th>
+      <th
+        class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium css-1ygcj2i-MuiTableCell-root"
+        scope="col"
+      >
+        Destination
+      </th>
+      <th
+        class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium css-1ygcj2i-MuiTableCell-root"
+        scope="col"
+      >
+        Departure Time
+      </th>
+      <th
+        class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium css-1ygcj2i-MuiTableCell-root"
+        scope="col"
+      >
+        Status
+      </th>
+    </tr>
+  </thead>
+</div>
+`;
