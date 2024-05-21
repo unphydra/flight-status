@@ -8,7 +8,11 @@ describe("FlightsTableHeader", () => {
     render(
       <TableContainer>
         <Table>
-          <FlightTableHeader />
+          <FlightTableHeader
+            order={"asc"}
+            orderBy={"departureTime"}
+            handleSort={() => {}}
+          />
         </Table>
       </TableContainer>
     );
@@ -33,7 +37,13 @@ describe("FlightsTableHeader", () => {
   });
 
   it("Should renders correct number of columns", () => {
-    render(<FlightTableHeader />);
+    render(
+      <FlightTableHeader
+        order={"asc"}
+        orderBy={"departureTime"}
+        handleSort={() => {}}
+      />
+    );
 
     const tableHead = screen.getByRole("rowgroup");
     const tableHeaders = tableHead.querySelectorAll("th");
