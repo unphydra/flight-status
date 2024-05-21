@@ -1,0 +1,24 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`ErrorCard > Should renders without crashing 1`] = `
+<div>
+  <div
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation3 css-83nk81-MuiPaper-root"
+  >
+    <div
+      class="MuiContainer-root MuiContainer-maxWidthLg css-1oqqzyl-MuiContainer-root"
+    >
+      <h5
+        class="MuiTypography-root MuiTypography-h5 css-ch2k2f-MuiTypography-root"
+      >
+        Error Title
+      </h5>
+      <p
+        class="MuiTypography-root MuiTypography-body1 css-7caa22-MuiTypography-root"
+      >
+        Error Description
+      </p>
+    </div>
+  </div>
+</div>
+`;
