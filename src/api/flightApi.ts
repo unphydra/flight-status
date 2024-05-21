@@ -24,4 +24,9 @@ export default class FlightApi {
     const { data } = await this.apiService.get("/flights");
     return data;
   }
+
+  async fetchFlightDetails(id: string): Promise<FlightDetail> {
+    const { data } = await this.apiService.get(`/flights/${id}`);
+    return data;
+  }
 }

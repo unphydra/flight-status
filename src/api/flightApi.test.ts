@@ -21,22 +21,30 @@ vi.mock("axios", async (importActual) => {
   return mockAxios;
 });
 
-describe("API Service", () => {
-  it("should fetch flights status details", async () => {
-    const flightDetails: FlightDetail = {
-      id: 1,
-      flightNumber: "1",
-      airline: "airline",
-      origin: "origin",
-      destination: "destination",
-      departureTime: "departureTime",
-      status: FlightStatus.ON_TIME,
-    };
+describe("Flight Api", () => {
+  const flightDetails: FlightDetail = {
+    id: 1,
+    flightNumber: "1",
+    airline: "airline",
+    origin: "origin",
+    destination: "destination",
+    departureTime: "2024-05-20T18:18:23.141Z",
+    status: FlightStatus.ON_TIME,
+  };
 
-    mocks.get.mockResolvedValue({ data: [flightDetails] });
+  describe("fetchFlights", () => {
+    it("should fetch flights status details", async () => {
+      mocks.get.mockResolvedValue({ data: [flightDetails] });
 
-    const res = await new FlightApi(instance).fetchFlights();
-
-    expect(res).toEqual([flightDetails]);
+      const res = await new FlightApi(instance).fetchFlights();
+      expect(res).toEqual([flightDetails]);
+    });
+  });
+  describe("fetchFlightDetails", () => {
+    it("should fetch flight details", async () => {
+      mocks.get.mockResolvedValue({ data: flightDetails });
+      const res = await new FlightApi(instance).fetchFlights();
+      expect(res).toEqual(flightDetails);
+    });
   });
 });
