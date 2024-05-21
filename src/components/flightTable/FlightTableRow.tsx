@@ -18,7 +18,7 @@ export function FlightTableRow({
       onClick={() => {
         navigate(`/flight/${flightDetails.id}`);
       }}
-      sx={{ cursor: "pointer" }}
+      className="flight-table-body-row"
     >
       <TableCell>{flightDetails.flightNumber}</TableCell>
       <TableCell>{flightDetails.airline}</TableCell>

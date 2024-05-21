@@ -1,0 +1,26 @@
+.flight-status-body {
+  font-weight: bold;
+  text-align: center;
+  padding: 10px 0px;
+  border-radius: 5px;
+}
+
+.flight-status-on-time {
+  color: green;
+  background-color: lightgreen;
+}
+
+.flight-status-boarding {
+  color: blue;
+  background-color: lightblue;
+}
+
+.flight-status-departed {
+  color: darkorange;
+  background-color: #f8d494;
+}
+
+.flight-status-delayed {
+  color: red;
+  background-color: #eec8c8;
+}

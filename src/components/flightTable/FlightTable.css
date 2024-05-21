@@ -1,0 +1,12 @@
+.flight-table-body-row {
+  cursor: pointer;
+}
+
+.flight-table-header-label {
+  font-size: larger;
+}
+
+.flight-table-footer-row,
+.flight-table-header {
+  background-color: #eeeeee;
+}

@@ -1,5 +1,6 @@
 import { Container, Paper, Typography } from "@mui/material";
 import { ComponentType } from "react";
+import "./ErrorCard.css";
 
 interface Props {
   title: string;
@@ -13,23 +14,14 @@ export default function ErrorCard({
   ActionComponent,
 }: Props) {
   return (
-    <Paper
-      elevation={3}
-      sx={{
-        m: "20vh auto",
-        maxWidth: "40vw",
-        minHeight: "40vh",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        textAlign: "center",
-      }}
-    >
+    <Paper elevation={3} className="error-card-paper">
       <Container>
-        <Typography variant={"h5"} mb={2}>
+        <Typography variant={"h5"} className="error-card-typography">
           {title}
         </Typography>
-        <Typography mb={2}>{description}</Typography>
+        <Typography className="error-card-typography">
+          {description}
+        </Typography>
         {ActionComponent && <ActionComponent />}
       </Container>
     </Paper>

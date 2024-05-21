@@ -1,0 +1,6 @@
+.header-toolbar {
+  margin: auto 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}

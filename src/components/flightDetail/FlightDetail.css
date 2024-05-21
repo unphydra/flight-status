@@ -1,0 +1,58 @@
+.flight-detail-container {
+  margin-top: 100px;
+  background-color: white;
+}
+
+.flight-detail-box {
+  display: flex;
+  min-height: 30vh;
+  justify-content: center;
+  border: 2px solid rgb(189, 189, 189);
+  border-radius: 8px;
+}
+
+.flight-detail-airline-box {
+  width: 10%;
+  text-align: center;
+  align-self: center;
+  margin-right: 20px;
+}
+
+.flight-detail-info-box {
+  display: flex;
+  margin-top: 10px;
+  height: 60%;
+}
+
+.flight-detail-place-box {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 2px;
+}
+
+.flight-detail-place-bullet {
+  border: 2px solid;
+  border-radius: 12px;
+  box-sizing: border-box;
+  height: 12px;
+  width: 12px;
+}
+
+.flight-detail-place-connecter {
+  border-right: 4px dotted;
+  flex: 1;
+  margin: 4px 0;
+  width: 4px;
+}
+
+.flight-detail-place-typography-box {
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.flight-detail-status-box {
+  width: 20%;
+  align-self: center;
+}

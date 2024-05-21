@@ -50,7 +50,7 @@ export default function FlightTableHeader({
   };
 
   return (
-    <TableHead>
+    <TableHead className="flight-table-header">
       <TableRow>
         {columns.map(({ id, label }, index) => (
           <TableCell key={index}>
@@ -58,6 +58,7 @@ export default function FlightTableHeader({
               active={orderBy === id}
               direction={orderBy === id ? order : "asc"}
               onClick={createSortHandler(id)}
+              className="flight-table-header-label"
             >
               {label}
             </TableSortLabel>

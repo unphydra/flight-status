@@ -6,6 +6,7 @@ import TablePagination from "@mui/material/TablePagination";
 import TableRow from "@mui/material/TableRow";
 import { useState } from "react";
 import { FlightDetail } from "../../api/flightApi";
+import "./FlightTable.css";
 import FlightTableHeader from "./FlightTableHeader";
 import { FlightTableRow } from "./FlightTableRow";
 
@@ -71,7 +72,7 @@ export default function FlightTable({
             ))}
         </TableBody>
         <TableFooter>
-          <TableRow>
+          <TableRow className="flight-table-footer-row">
             <TablePagination
               count={flights?.length || 0}
               rowsPerPage={rowsPerPage}

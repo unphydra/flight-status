@@ -1,45 +1,12 @@
-import { Typography, styled } from "@mui/material";
-import { ReactNode } from "react";
+import { Typography } from "@mui/material";
 import { FlightStatus as FlightStatusEnum } from "../../api/flightApi";
+import "./FlightStatus.css";
 
-const Status = styled(Typography)({
-  fontWeight: "bold",
-  textAlign: "center",
-  padding: "10px 0px",
-  borderRadius: 5,
-});
-
-const OnTime = styled(Status)({
-  color: "green",
-  backgroundColor: "lightgreen",
-});
-
-const Boarding = styled(Status)({
-  color: "blue",
-  backgroundColor: "lightblue",
-});
-
-const Delayed = styled(Status)({
-  color: "darkorange",
-  backgroundColor: "#f8d494",
-});
-
-const Departed = styled(Status)({
-  color: "red",
-  backgroundColor: "#eec8c8",
-});
-
-const StatusComponentMap: Record<FlightStatusEnum, ReactNode> = {
-  [FlightStatusEnum.ON_TIME]: <OnTime>{FlightStatusEnum.ON_TIME}</OnTime>,
-  [FlightStatusEnum.BOARDING]: (
-    <Boarding>{FlightStatusEnum.BOARDING}</Boarding>
-  ),
-  [FlightStatusEnum.DEPARTED]: (
-    <Departed>{FlightStatusEnum.DEPARTED}</Departed>
-  ),
-  [FlightStatusEnum.DELAYED]: (
-    <Delayed>{FlightStatusEnum.DELAYED}</Delayed>
-  ),
+const StatusClassNameMap: Record<FlightStatusEnum, string> = {
+  [FlightStatusEnum.ON_TIME]: "flight-status-on-time",
+  [FlightStatusEnum.BOARDING]: "flight-status-boarding",
+  [FlightStatusEnum.DEPARTED]: "flight-status-departed",
+  [FlightStatusEnum.DELAYED]: "flight-status-delayed",
 };
 
 export default function FlightStatus({
@@ -47,5 +14,11 @@ export default function FlightStatus({
 }: {
   status: FlightStatusEnum;
 }) {
-  return StatusComponentMap[status];
+  return (
+    <Typography
+      className={`flight-status-body ${StatusClassNameMap[status]}`}
+    >
+      {status}
+    </Typography>
+  );
 }

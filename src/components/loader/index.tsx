@@ -1,16 +1,9 @@
 import { Box, CircularProgress } from "@mui/material";
+import "./Loader.css";
 
 export default function Loader() {
   return (
-    <Box
-      sx={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        textAlign: "center",
-        minHeight: "80vh",
-      }}
-    >
+    <Box className="loader-body">
       <CircularProgress />
     </Box>
   );
