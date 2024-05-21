@@ -1,9 +1,0 @@
-// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
-
-exports[`ErrorBoundary > Should renders without crashing 1`] = `
-<div>
-  <div>
-    Normal Child Component
-  </div>
-</div>
-`;

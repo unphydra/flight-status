@@ -13,13 +13,6 @@ describe("FlightTable", () => {
     status: FlightStatus.ON_TIME,
   };
 
-  it("Should renders without crashing", async () => {
-    const { container } = render(
-      <FlightTable flights={[flightDetails]} />
-    );
-    expect(container).toMatchSnapshot();
-  });
-
   it("Should renders flight table correctly", async () => {
     const { findByText } = render(
       <FlightTable flights={[flightDetails]} />

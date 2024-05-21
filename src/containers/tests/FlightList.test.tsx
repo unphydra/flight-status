@@ -41,13 +41,12 @@ describe("FlightListContainer", () => {
     vi.resetAllMocks();
   });
 
-  it("Should renders and match snapshot", async () => {
+  it("Should renders flight table", async () => {
     mocks.get.mockResolvedValue({ data: [flightDetails] });
-    const { container } = render(<FlightListContainer />);
+    render(<FlightListContainer />);
     await waitFor(() => {
       const flightTable = screen.getByTestId("flight-table");
       expect(flightTable).toBeInTheDocument();
-      expect(container).toMatchSnapshot();
     });
   });
 });

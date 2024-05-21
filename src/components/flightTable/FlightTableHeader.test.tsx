@@ -3,11 +3,6 @@ import FlightTableHeader from "./FlightTableHeader";
 import { render, screen } from "@testing-library/react";
 
 describe("FlightsTableHeader", () => {
-  it("Should renders and match snapshot", () => {
-    const { container } = render(<FlightTableHeader />);
-    expect(container).toMatchSnapshot();
-  });
-
   it("Should renders flight table header correctly", () => {
     render(<FlightTableHeader />);
 

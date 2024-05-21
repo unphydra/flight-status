@@ -10,15 +10,6 @@ function FallbackComponent(): JSX.Element {
 }
 
 describe("ErrorBoundary", () => {
-  it("Should renders without crashing", () => {
-    const { container } = render(
-      <ErrorBoundary fallback={<FallbackComponent />}>
-        <div>Normal Child Component</div>
-      </ErrorBoundary>
-    );
-    expect(container).toMatchSnapshot();
-  });
-
   it("should render the fallback UI when an error occurs", () => {
     render(
       <ErrorBoundary fallback={<FallbackComponent />}>

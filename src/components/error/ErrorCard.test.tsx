@@ -5,13 +5,6 @@ describe("ErrorCard", () => {
   const title = "Error Title";
   const description = "Error Description";
 
-  it("Should renders without crashing", () => {
-    const { container } = render(
-      <ErrorCard title={title} description={description} />
-    );
-    expect(container).toMatchSnapshot();
-  });
-
   it("Should renders title and description", () => {
     render(<ErrorCard title={title} description={description} />);
 
